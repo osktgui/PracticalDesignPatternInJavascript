@@ -1,14 +1,16 @@
 var Task = function (name) {
   this.name = name;
   this.completed = false;
-  this.complete = function () {
-    console.log('compliting task: ' + this.name);
-    this.completed = true;
-  }
-  this.save = function () {
-    console.log('Saving Task: ' + this.name);
-  }
 }
+
+Task.prototype.complete = function () {
+  console.log('completing task: ' + this.name);
+  this.completed = true;
+};
+
+Task.prototype.save = function () {
+  console.log('Saving Task: ' + this.name);
+};
 
 var task1 = new Task('create a demo for contructors');
 var task2 = new Task('create a demo for modules');
